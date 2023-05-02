@@ -5,12 +5,19 @@ import 'package:pet_finder/config/theme/app_theme.dart';
 import 'package:pet_finder/domain/providers/locale_provider.dart';
 import 'package:pet_finder/domain/providers/theme_provider.dart';
 import 'package:pet_finder/generated/l10n.dart';
+import 'package:pet_finder/qa/flavor_banner.dart';
+import 'package:pet_finder/qa/flavors.dart';
 
 /// MyApp widget. enter point of application
 class MyApp extends ConsumerWidget {
   /// MyApp widget. enter point of application
-  const MyApp({super.key});
+  const MyApp({
+    required this.flavor,
+    super.key,
+  });
 
+  /// application flavor
+  final Flavor flavor;
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -27,7 +34,10 @@ class MyApp extends ConsumerWidget {
       locale: ref.watch(localeProvider),
       title: 'Flutter Demo',
       theme: CustomAppTheme.light,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: FlavorBanner(
+        flavor: Flavor.dev,
+        child: const MyHomePage(title: 'Flutter Demo Home Page'),
+      ),
     );
   }
 }

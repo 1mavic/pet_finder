@@ -49,6 +49,36 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Error on storage initialization`
+  String get localStorageInitError {
+    return Intl.message(
+      'Error on storage initialization',
+      name: 'localStorageInitError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error on reading data from local storage`
+  String get localStorageReadError {
+    return Intl.message(
+      'Error on reading data from local storage',
+      name: 'localStorageReadError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error on saving data from local storage`
+  String get localStorageWriteError {
+    return Intl.message(
+      'Error on saving data from local storage',
+      name: 'localStorageWriteError',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

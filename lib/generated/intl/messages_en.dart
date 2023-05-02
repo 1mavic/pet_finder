@@ -21,5 +21,12 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "localStorageInitError": MessageLookupByLibrary.simpleMessage(
+            "Error on storage initialization"),
+        "localStorageReadError": MessageLookupByLibrary.simpleMessage(
+            "Error on reading data from local storage"),
+        "localStorageWriteError": MessageLookupByLibrary.simpleMessage(
+            "Error on saving data from local storage")
+      };
 }

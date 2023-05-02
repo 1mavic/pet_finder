@@ -21,5 +21,12 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ru_RU';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "localStorageInitError": MessageLookupByLibrary.simpleMessage(
+            "Ошибка при инициализации хранилища"),
+        "localStorageReadError": MessageLookupByLibrary.simpleMessage(
+            "Ошибка при чтении из хранилища"),
+        "localStorageWriteError": MessageLookupByLibrary.simpleMessage(
+            "Ошибка при записи в хранилище")
+      };
 }

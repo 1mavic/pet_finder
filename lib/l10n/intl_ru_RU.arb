@@ -1,1 +1,5 @@
-{}
+{
+    "localStorageInitError": "Ошибка при инициализации хранилища",
+    "localStorageReadError": "Ошибка при чтении из хранилища",
+    "localStorageWriteError": "Ошибка при записи в хранилище"
+}

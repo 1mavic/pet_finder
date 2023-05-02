@@ -1,1 +1,5 @@
-{}
+{
+    "localStorageInitError": "Error on storage initialization",
+    "localStorageReadError": "Error on reading data from local storage",
+    "localStorageWriteError": "Error on saving data from local storage"
+}
